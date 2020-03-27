@@ -31,8 +31,8 @@ const processOpCode = (codeArr, data) => {
 //part two
 const calculateGravityBoost = async (endResult) => {
     try {
-        for (let x = 0; x <= 100; x++) {
-            for (let y = 0; y <= 100; y++) {
+        for (let x = 0; x <= 500; x++) {
+            for (let y = 0; y <= 500; y++) {
                 console.log(`Trying x: ${x}, y: ${y}`);
                 let answer = await comp2(initialData, x, y);
                 if (answer[0] === endResult) {
@@ -61,13 +61,14 @@ const comp2 = (initial, noun = 12, verb = 2) => {
     }
     return (data);
 }
+
 const generateRandomNumbers = async (range) => {
     let pairs = [];
     for (let x = 0; x < range; x++) {
         for(let y = 0; y < range; y++) {
             pairs.push([x, y])
         }
-    }
+    };
     return pairs;
 }
 
